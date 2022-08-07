@@ -1,0 +1,980 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+	background: url(../img/обои.jpg);
+	background-position: -150% 0%;
+	background-size: 90% 100%;
+	background-repeat: no-repeat;
+
+}
+:root {
+  --dark-green: #9cc675;
+  --dark-yellow: #e89a3d;
+  --extra-light-brown:#fdf0d7;
+  --light-brown: #ecd5ab;
+  --dark-brown:#915b40;
+  --light-yellow:#f8e3a8;
+  --light-red:#f3ac99;
+  --light-teal:#a6c8cc;
+  --light-gray:#ddd5d6;
+  --theme-color2: #e89a3d;
+}
+
+.header{
+	position: fixed;
+	width: 100%;
+	padding: 5px 0;
+	font-family: serif;
+	z-index: 100;
+	backdrop-filter: blur(15px);
+	background: rgba(51, 51, 51, 0);
+	transition: all 0.3s ease;
+}
+.max-width{
+	max-width: 1200px;
+	padding: 0 80px;
+	margin: 0 auto; 
+}
+.header .max-width{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header .logo a{
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: 600;
+	position: relative;
+	bottom: 5px;
+  margin-right: 25px;
+	text-shadow: 0px 2px 2px #000000;
+}
+.header .logo a span{
+	font-size: 47px;
+	text-transform: uppercase;
+	position: relative;
+	top: 5px;
+	color: #cc0791;
+	
+}
+.header .menu li{
+	list-style: none;
+	display: inline-block;
+}
+.header .menu li a{
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	font-family: 'Londrina Sketch';
+	letter-spacing: 2px;
+
+	transition: 0.4s ease 0s;
+	margin-left: 25px;
+} 
+.header .menu li a span{
+	animation:  neon 1.5s infinite alternate-reverse ;
+}
+.header .menu li a:hover{
+	color: #cc0791;
+	
+} 
+.menu__btn{
+	color: #ffffff;
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+}
+.menu__logo{
+	color: #ffffff;
+	font-size: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+
+.testimonial p {
+font-size: 18px;
+letter-spacing: 0.02em;
+line-height: 26px;
+padding: 15px;
+background-color: #4141415d;
+backdrop-filter: blur(15px);
+border-radius: 5px;
+}
+.testimonial .name {
+font-weight: bold;
+font-size: 42px;
+letter-spacing: 0.04em;
+line-height: 42px;
+text-align: center;
+padding: 5px 0px 10px 0px;
+background-color: #000000a4;
+backdrop-filter: blur(15px);
+border-radius: 5px;
+}
+.testimonial .designation {
+font-size: 14px;
+letter-spacing: 0.04em;
+text-align: left;
+border-radius: 5px;
+color: #fff;
+opacity: 0.65;
+background-color: #915b4000;
+backdrop-filter: blur(15px);
+}
+
+.modal {
+	background-color: #c9bbff;
+	width: 650px;
+	max-width: 100%;
+	padding: 40px 40px;
+	border-radius:5px ;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+	text-align: center;
+	margin-top: 50px;
+}
+.modal h4{
+	color: #141414;
+	margin-bottom: 5px;
+	font-size: 30px;
+	width: 250px;
+	max-width: 100%;
+	text-align: left;
+}
+.modal h5{
+	color: #89ff3b;
+	background-color: #333;
+	font-size: 20px;
+	width: 100px;
+	padding: 1px 3px;
+	border-radius: 5px;
+	max-width: 100%;
+	text-align: center;
+}
+.sale{
+	background-color: #cc0791;
+	width: 150px;
+	max-width: 100%;
+	padding: 15px 25px;
+	text-align: left;
+	margin: 10px 0px;
+	transition: 0.3s ease;
+	border-radius: 5px;
+	font-size: 22px;
+	cursor: pointer;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.sale i{
+	font-size: 30px;
+	margin-left: 20px;
+}
+.sale:hover{
+	background-color: red;
+	
+	
+	
+}
+.modal h6{
+	color: #141414;
+	font-size: 18px;
+	width: 250px;
+	max-width: 100%;
+	text-align: left;
+	
+}
+.modal .not-sale{
+	color: #ff1f1f;
+	background-color: #333;
+	font-size: 20px;
+	width: 140px;
+	padding: 1px 3px;
+	border-radius: 5px;
+	max-width: 100%;
+	text-align: center;
+}
+.modal h6 span{
+	font-weight: 600;
+}
+.read{
+	display: flex;
+	color: #141414;
+	font-size: 19px;
+	width: 250px;
+	font-weight: 600;
+	max-width: 100%;
+	text-align: left;
+	align-items: center;
+	position: relative;
+	bottom: 5px;
+
+}
+.read:hover{
+	text-decoration:underline;
+}
+.read i{
+	font-size: 30px;
+	margin-right: 10px;
+}
+.read__download{
+	display: flex;
+	color: #141414;
+	position: relative;
+	bottom: 10px;
+	font-size: 19px;
+	width: 250px;
+	font-weight: 600;
+	max-width: 100%;
+	text-align: left;
+	align-items: center;
+	margin-bottom: 10px;
+
+}
+.read__download:hover{
+	text-decoration:underline;
+}
+.read__download i{
+	font-size: 30px;
+	margin-right: 10px;
+}
+.card__book{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/Кладбище\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 35%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_2{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/Миры.jpg);
+	background-size: 130%;
+	background-repeat: no-repeat;
+	background-position: 35%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_3{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/Луг\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 60%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_4{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/ночь\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 60%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_5{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/рай\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 25%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_6{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/волонтеры\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_7{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/закон\ джунглей\ книга.jpg);
+	background-size: 200%;
+	background-repeat: no-repeat;
+	background-position: 40%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_8{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/вознесение\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 80%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_9{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img//иллюзия\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_10{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/одиночество\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+
+.card__book_11{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/Ужин\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.card__book_12{
+	width: 350px;
+	max-width: 100%;
+	height: 330px;
+	max-height: 100%;
+	left: 47%;
+	bottom: 28%;
+	border-radius: 5px;
+	background-image: url(../img/мы\ живы\ книга.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 55% ;
+	position: absolute;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+
+button{
+	cursor: pointer;
+	padding: 10px 30px;
+	font-size: 17px;
+	color: #333;
+	margin: 0 auto;
+	text-align: center;
+	background: #fff; 
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+	font-weight: bold;
+	margin-top: 35px;
+	transition: .3s linear;
+	border-radius:5px ;
+
+
+}
+button:hover{
+	letter-spacing: 2px;
+	background-color: rgba(51, 51, 51, 0.726);
+	color:#fff; 
+}
+
+
+.modal_container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.4s ease;
+}
+.modal_container.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_2.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_3{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_3.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_4{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_4.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_5{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_5.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_6{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_6.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_7{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_7.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_8{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_8.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_9{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_9.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_10{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_10.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_11{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_11.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.modal_container_12{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000096;
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.modal_container_12.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+
+
+.gallery-thumbs {
+height: 100%;
+
+}
+.gallery-thumbs .swiper-wrapper {
+align-items: center;
+
+}
+.gallery-thumbs .swiper-slide {
+background-position: center;
+background-size: cover;
+width: 280px !important;
+height: 380px;
+position: relative;
+box-shadow: 0 5px 15px #000000;
+border-radius: 10px;
+
+}
+.gallery-thumbs .swiper-slide img {
+filter: contrast(0.5) blur(1px);
+width: 100%;
+height: 100%;
+border-radius: 10px;
+transition: 0.5s ease;
+}
+.gallery-thumbs .swiper-slide-active img {
+filter: contrast(1) blur(0px) !important;
+transition: 0.5s ease;
+}
+.flex-row {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+margin-right: -15px;
+margin-left: -15px;
+}
+.flex-row .flex-col {
+-ms-flex-preferred-size: 0;
+flex-basis: 0;
+-webkit-box-flex: 1;
+-ms-flex-positive: 1;
+flex-grow: 1;
+max-width: 100%;
+position: relative;
+width: 100%;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+}
+.gallery-thumbs .swiper-wrapper {
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+}
+
+
+.testimonial-section .quote {
+width: 75%;
+height: 100%;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+padding-left: 100px;
+padding-right: 100px;
+}
+.swiper-container.testimonial {
+height: 100vh;
+}
+.testimonial-section .user-saying {
+background: #000000;;
+width: 60%;
+color: #fff;
+height: 100%;
+}
+.testi-user-img {
+width: 40%;
+}
+.testimonial-section {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: justify;
+-ms-flex-pack: justify;
+justify-content: space-between;
+width: 100%;
+height: 100%;
+}
+.testimonial-section .quote p {
+font-size: 20px;
+font-weight: 300;
+line-height: 1.8;
+font-style: italic;
+margin: 0;
+}
+.quote-icon {
+width: 38px;
+display: block;
+margin-bottom: 30px;
+}
+
+.quote-1{
+	background: url(../img/фон\ кладбище.jpg);
+	background-size: cover;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-2{
+	background: url(../img/Фон\ Между\ Мирами.jpg);
+	background-size: cover;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-3{
+	background: url(../img/фон\ луг\ 2.jpg);
+	background-size:cover;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-4{
+	background: url(../img/фон\ ночь.jpg);
+	background-size: cover;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-5{
+	background: url(../img/Фон\ рай.JPG);
+	background-size: cover;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-6{
+	background: url(../img/фон\ волонтеры.jpg);
+	background-size:cover;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-7{
+	background: url(../img/фон\ джунгли.JPG);
+	background-size: cover;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-8{
+	background: url(../img/фон\ вознесение.jpg);
+	background-size: cover;
+	background-position: 70%;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-9{
+	background: url(../img/фон\ иллюзия.jpg);
+	background-size:cover;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-10{
+	background: url(../img/фон\ одиночество.jpg);
+	background-size: cover;
+	background-repeat: no-repeat ;
+	background-position: 60%;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-11{
+	background: url(../img/фон\ гниль.jpg);
+	background-size: cover;
+	background-repeat: no-repeat ;
+	background-position: 20%;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.quote-12{
+	background: url(../img/фон\ почему\ мы.jpg);
+	background-size: cover;
+	background-position: 20%;
+	background-repeat: no-repeat ;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
