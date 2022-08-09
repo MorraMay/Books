@@ -979,3 +979,234 @@ margin-bottom: 30px;
 	padding-left: 100px;
 	padding-right: 100px;
 }
+
+
+@media (max-width: 991px){
+	body {
+  font-family: 'Lato', sans-serif;
+	background: url(../img/обои.jpg);
+	background-position: -150% 0%;
+	background-size: 100% 60%;
+	background-repeat: no-repeat;
+
+}
+
+
+/*..........HEADER........*/
+.header{
+	position: fixed;
+	width: 100%;
+	padding: 5px 0;
+	font-family: serif;
+	z-index: 100;
+	backdrop-filter: blur(15px);
+	background: rgba(51, 51, 51, 0);
+	transition: all 0.3s ease;
+	
+}
+.max-width{
+	max-width: 1200px;
+	padding: 0 80px;
+	margin: 0 auto; 
+	
+}
+.header .max-width{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header .logo a{
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: 600;
+	position: relative;
+	bottom: 5px;
+  margin-right: 25px;
+	text-shadow: 0px 2px 2px #000000;
+}
+.header .logo a span{
+	font-size: 47px;
+	text-transform: uppercase;
+	position: relative;
+	top: 5px;
+	color: #cc0791;
+	
+}
+.header .menu li{
+	list-style: none;
+	display: inline-block;
+}
+.header .menu li a{
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	font-family: 'Londrina Sketch';
+	letter-spacing: 2px;
+
+	transition: 0.4s ease 0s;
+	margin-left: 25px;
+} 
+.header .menu li a span{
+	animation:  neon 1.5s infinite alternate-reverse ;
+}
+.header .menu li a:hover{
+	color: #cc0791;
+	
+} 
+.menu__btn{
+	color: #ffffff;
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+}
+.menu__logo{
+	color: #ffffff;
+	font-size: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+
+/*..........CONTENT WORDS.......*/
+.testimonial p {
+	font-size: 16px;
+	letter-spacing: 0.02em;
+	line-height: 18px;
+	padding: 5px;
+	background-color: #4141415d;
+	backdrop-filter: blur(15px);
+	border-radius: 5px;
+	}
+	.testimonial .name {
+	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 0.04em;
+	line-height: 25px;
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+	background-color: #000000a4;
+	backdrop-filter: blur(15px);
+	border-radius: 5px;
+	}
+	.testimonial .designation {
+	font-size: 10px;
+	letter-spacing: 0.04em;
+	text-align: left;
+	border-radius: 5px;
+	color: #fff;
+	opacity: 0.65;
+	background-color: #915b4000;
+	backdrop-filter: blur(15px);
+	}
+
+	.testimonial-section .quote {
+		width: 60%;
+		height: 60%;
+		display: -webkit-inline-flex;
+		display: -ms-flexbox;
+		display: inline;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		padding-left: 100px;
+		padding-right: 100px;
+		
+		
+		}
+		.swiper-container.testimonial {
+		height:50vh;
+	
+		}
+		.testimonial-section .user-saying {
+		background: #000000;;
+		width: 100%;
+		color: #fff;
+		margin-top: 80px;
+		height: 100%;
+		
+		}
+		.testi-user-img {
+		width: 100%;
+		
+		}
+		.testimonial-section {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: inline;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+		
+		}
+		.testimonial-section .quote p {
+		font-size: 15px;
+		font-weight: 300;
+		line-height: 1.3;
+		font-style: italic;
+		margin: 0;
+		}
+		.quote-icon {
+		width: 22px;
+		display: block;
+		margin-bottom: 10px;
+		}
+
+		.gallery-thumbs {
+			height: 10%;
+			}
+			.gallery-thumbs .swiper-wrapper {
+			align-items: left;
+			}
+			.gallery-thumbs .swiper-slide {
+			background-position: center;
+			background-size: cover;
+			width: 230px !important;
+			height: 330px;
+			position: relative;
+			box-shadow: 0 5px 15px #000000;
+			border-radius: 10px;
+			}
+			.gallery-thumbs .swiper-slide img {
+			filter: contrast(0.5) blur(1px);
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+			transition: 0.5s ease;
+			}
+			.gallery-thumbs .swiper-slide-active img {
+			filter: contrast(1) blur(0px) !important;
+			transition: 0.5s ease;
+			}
+			.flex-row {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			margin-right: 0px;
+			margin-left: 0px;
+			}
+			.flex-row .flex-col {
+			-ms-flex-preferred-size: 0;
+			flex-basis: 0;
+			-webkit-box-flex: 1;
+			-ms-flex-positive: 1;
+			flex-grow: 1;
+			max-width: 100%;
+			position: relative;
+			width: 100%;
+			min-height: 1px;
+			padding-right: 115px;
+			padding-left: 15px;
+			}
+			.gallery-thumbs .swiper-wrapper {
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			}
+}
